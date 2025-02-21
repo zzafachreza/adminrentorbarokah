@@ -118,7 +118,7 @@ $comp = $hasilCom->result();
     }
     
 </style> 
-<body style="background-image: url('<?php echo  site_url("assets/images/bglogin.png") ?>');background-size: 50% 50%;background-position: center;
+<body style="background: linear-gradient(<?php echo $comp[0]->warna_utama ?>, <?php echo $comp[0]->warna_kedua ?>);;background-size: 50% 50%;background-position: center;
   background-repeat: no-repeat;
   background-size: cover;">
   
@@ -162,8 +162,8 @@ $comp = $hasilCom->result();
   
 <div class="row" style="padding-top: 5%">
 
-<div class="col col-sm-7"></div>
-  <div class="col col-sm-5" style="padding: 5%">
+<div class="col col-sm-3"></div>
+  <div class="col col-sm-6" style="padding: 5%">
      <div class="card" style="padding: 20px;margin-top: 5%">
         <center>
              <h2 class="text-utama">Masuk</h2>
@@ -189,6 +189,7 @@ $comp = $hasilCom->result();
 
 
   </div>
+  <div class="col col-sm-3"></div>
   
   </div>
 <?php } ?>
