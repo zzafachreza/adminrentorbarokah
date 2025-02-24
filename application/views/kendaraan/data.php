@@ -44,6 +44,7 @@
         <tbody>
       
             <?php
+            
             $no=0;
                   $sql = "SELECT * FROM data_$modul a";
             foreach($this->db->query($sql)->result() as $row){

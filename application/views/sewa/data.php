@@ -44,6 +44,7 @@
         <tbody>
       
             <?php
+            date_default_timezone_set('Asia/Jakarta');
             $no=0;
                   $sql = "SELECT * FROM data_$modul a";
             foreach($this->db->query($sql)->result() as $row){
@@ -83,6 +84,7 @@
 
                            
                             }else{
+
                                  $tanggaljam1 = new DateTime($row->tanggal_ambil . ' ' . $row->jam_ambil);
                                 $tanggaljam2 = new DateTime(); // Waktu sekarang
                             }
