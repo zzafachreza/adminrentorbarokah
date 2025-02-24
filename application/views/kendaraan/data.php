@@ -23,7 +23,7 @@
  
  ?>
 
-      <table class="table table-bordered table-striped table-hover nowrap tabza display table-responsive"  style="width:100%">
+      <table class="table table-bordered table-striped table-hover nowrap tabza display"  style="width:100%">
         <thead class="bg-utama" style="color:white">
           <tr>
                   <th>No</th>
@@ -70,6 +70,12 @@
                           ?>
                             <td><?php echo Indonesia3Tgl($row->{$k->Field}) ?> ( <?php echo umur($row->{$k->Field}) ?> )</td>
 
+                           <?php }elseif($k->Field=='kelengkapan'){
+
+                          
+                          ?>
+                            <td>STNK,Kunci,Helm,Jas Hujan</td>
+
                            <?php }elseif($k->Type=='float'){
 
                           
@@ -78,18 +84,18 @@
 
                            <?php }elseif(substr($k->Field, 0,4) =="fid_"){ 
 
-                      $tabel_nama = explode("_", $k->Field)[1];
+                                $tabel_nama = explode("_", $k->Field)[1];
 
-                      if($tabel_nama=='sekolah'){
-                        $showRelation = $row->nama_sekolah;
-                      } elseif($tabel_nama=='bank'){
-                        $showRelation = $row->nama_bank.' / '.$row->nomor_rekening;
-                      } elseif($tabel_nama=='bahanhijab'){
-                        $showRelation = $row->nama_bahan.' / '.$row->size;
-                      } 
-                      elseif($tabel_nama=='kategori'){
-                        $showRelation = $row->nama_kategori;
-                      }   
+                                if($tabel_nama=='sekolah'){
+                                  $showRelation = $row->nama_sekolah;
+                                } elseif($tabel_nama=='bank'){
+                                  $showRelation = $row->nama_bank.' / '.$row->nomor_rekening;
+                                } elseif($tabel_nama=='bahanhijab'){
+                                  $showRelation = $row->nama_bahan.' / '.$row->size;
+                                } 
+                                elseif($tabel_nama=='kategori'){
+                                  $showRelation = $row->nama_kategori;
+                                }   
 
                 ?>
 

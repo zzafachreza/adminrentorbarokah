@@ -77,9 +77,16 @@
                         if($row->paket=='Perjam'){
                                 
                                     // hitung durasi
-                              $tanggaljam1 = new DateTime($row->tanggal_ambil . ' ' . $row->jam_ambil);
-                                $tanggaljam2 = new DateTime(); // Waktu sekarang
+                              if($row->status=='Selesai'){
+                                $tanggaljam1 = new DateTime($row->tanggal_ambil . ' ' . $row->jam_ambil);
+                                $tanggaljam2 = new DateTime($row->tanggal_kembali . ' ' . $row->jam_kembali); // Waktu sekarang
 
+                           
+                            }else{
+                                 $tanggaljam1 = new DateTime($row->tanggal_ambil . ' ' . $row->jam_ambil);
+                                $tanggaljam2 = new DateTime(); // Waktu sekarang
+                            }
+                             
                                 // Hitung selisih waktu
                                 $selisihjam = $tanggaljam1->diff($tanggaljam2);
 
